@@ -9,7 +9,7 @@ Not to worry if you are using flutter dialogs for computations that envolves sta
 
 To solve this problem im going to use Provider class
 
-1. Firstly you need to wrap your main.dart with a provider this allows you to register the models or notifier class which we would want to listen to changes from
+1. Firstly you need to wrap your main.dart with a provider, this allows you to register the models or notifier class that you would want to listen to changes from
 example:
 Widget build(BuildContext context) {
 
@@ -27,7 +27,7 @@ Widget build(BuildContext context) {
   
 2. Secondly you need a model that is going to extend a ChangeNotifier Class
 
-This is going to act as an obbervable class to monitor for changes which would have happened in that specific class. 
+This is going to act as an observable class to monitor for changes which would have happened in that specific class. 
 example:
 import 'package:flutter/material.dart';
 import 'constants.dart';
@@ -52,7 +52,7 @@ class RegisterCustomerModel extends ChangeNotifier{
   }
 }
   
-The notifyListeners method is going to be responsible for letting widgets which are uptop the state stack know if a change in state has occurred in this class effecting changes on our UI(in this case our customers Page).
+The notifyListeners method is going to be responsible for letting widgets which are up-top the state stack know if a change in state has occurred.Thus effecting changes on our UI(in this case our customers Page).
 
 3. Thirdly to listen to changes which would have been triggered by our notifyListeners() method you need a Consumer Widget at our UI level to register those changes on your UI.The consumer widget will rebuild you UI
 Consumer<RegisterCustomerModel>(
