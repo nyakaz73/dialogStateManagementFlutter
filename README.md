@@ -61,11 +61,9 @@ The notifyListeners method is going to be responsible for letting widgets which 
 
 3. Thirdly to listen to changes which would have been triggered by our notifyListeners() method you need a Consumer Widget at our UI level to register those changes on your UI.The consumer widget will rebuild you UI
 ```
-Consumer<RegisterCustomerModel>(
-    
-    builder:(context,consumerModel,child)=>consumerModel.customerDetailsList !=null?Text(consumerModel.numberOfCustomers.toString(),
-       style: TextStyle(fontWeight: FontWeight.w500,fontSize: 25.0, color:              Colors.green),):null,
- )
+Consumer<RegisterCustomerModel>( 
+    builder:(context,consumerModel,child)=>consumerModel.customerDetailsList !=null?                                             Text(consumerModel.numberOfCustomers.toString(),style: TextStyle(fontWeight: FontWeight.w500,fontSize: 25.0,                 color:Colors.green),):null,
+)
  ```
  
  End-------------------------------------------
