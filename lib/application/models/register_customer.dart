@@ -16,4 +16,9 @@ class RegisterCustomerModel extends ChangeNotifier{
     }));
     notifyListeners();
   }
+  
+  void removeCustomer(int index){
+    _customerDetailsList.removeAt(index);
+    notifyListeners();
+  }
 }
