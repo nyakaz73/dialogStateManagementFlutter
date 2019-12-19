@@ -93,7 +93,7 @@ class LandingPageState extends State<LandingPage>{
           child: Text('YES',style: TextStyle(color: Colors.red),),
           onPressed: () {
             final register = Provider.of<RegisterCustomerModel>(context);
-            register.customerDetailsList.removeAt(index);
+            register.removeCustomer(index);
             Navigator.of(context).pop();
           },
         ),
